@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>The Observatory — MetaVoxa</title>
+<title>The Observatory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -399,7 +399,7 @@ body{background:var(--sky);color:var(--text);font-family:var(--font-b);font-weig
   </div>
   <div class="cards-grid">
     <div class="wcard" id="card-study">
-      <div><p class="wnum">Wing I</p><p class="wtitle">Study Wing</p><p class="wdesc">Reading Room, Pattern Thoughts, Star of the Month</p></div>
+      <div><p class="wnum">Wing I</p><p class="wtitle">Study Wing</p><p class="wdesc">Reading Room</p></div>
       <div class="card-actions">
         <button class="btn-briefing" onclick="openPanel('study',this.closest('.wcard'))">Read Briefing</button>
         <a class="btn-enter" href="/study-wing.html">Enter Room →</a>
@@ -439,8 +439,6 @@ body{background:var(--sky);color:var(--text);font-family:var(--font-b);font-weig
       <a class="klink" href="/study-wing.html">Study Wing</a>
       <a class="klink" href="/salon.html">Salon</a>
       <a class="klink" href="/reading-room.html">Reading Room</a>
-      <a class="klink" href="/pattern-thoughts.html">Pattern Thoughts</a>
-      <a class="klink" href="/star-of-the-month.html">Star of the Month</a>
       <a class="klink" href="/glam-wing.html">Glam Wing</a>
       <a class="klink cur" href="/observatory.html">Observatory ·</a>
     </div>
@@ -450,32 +448,32 @@ body{background:var(--sky);color:var(--text);font-family:var(--font-b);font-weig
 <script>
 const PANELS={
   study:{title:'Study Wing — full briefing',rows:[
-    ['What it is','Three rooms built for sustained attention. The Reading Room holds curated essays and books. Pattern Thoughts releases one numbered observation per day from a 360-node archive. Star of the Month features a person or idea worth sustained focus.'],
-    ['How it works','Each room runs on its own rhythm. Pattern Thoughts uses node numbers, not calendar dates — the archive builds like a library, not a feed. The Reading Room links outward to the sources that shaped the essays.'],
-    ['Why it exists','For the kind of thinking that doesn\'t happen in 30 seconds. The Study Wing is where MetaVoxa does its intellectual work out loud, slowly, in public.'],
-    ['Right now','All three rooms are open. Pattern Thoughts is live and updating daily. The Reading Room and Star of the Month are actively curated.']
+    ['What it is','The Reading Room holds curated essays and books.'],
+    ['How it works','The room runs on its own rhythm. The Reading Room links outward to the sources that shaped the essays.'],
+    ['Why it exists','For the kind of thinking that doesn't happen in 30 seconds. The Study Wing is where I do intellectual work out loud, slowly, in public.'],
+    ['Right now','The Reading Room is actively curated.']
   ],link:'Enter the Study Wing →',href:'/study-wing.html'},
   salon:{title:'The Salon — full briefing',rows:[
     ['What it is','A real-time conversation room entered by choosing a role — Reader, Writer, Researcher, or Explorer. Each places you in a different zone. Presence appears as a coloured dot, not a name.'],
     ['How it works','Messages float across the room and fade after 20 seconds. No scrollback. No archive. The room resets when it empties. Optional ambient audio — rain and fire — sets the atmosphere.'],
-    ['Why it exists','MetaVoxa needed a space for live thought that leaves no record. The Salon is where ideas pass through rather than stay. What happens there doesn\'t feed the essays or the archive. That\'s the point.'],
+    ['Why it exists','People need a space for live thought that leaves no record. The Salon is where ideas pass through rather than stay. What happens there doesn\'t feed the essays or the archive. That\'s the point.'],
     ['Right now','The Salon is open. Enter from here, from the Lobby, or from the Atrium.']
   ],link:'Enter the Salon →',href:'/salon.html'},
   obs:{title:'The Observatory — full briefing',rows:[
-    ['What it is','The map room. A complete briefing on how MetaVoxa works — every wing, every system, every essay thread — for anyone who walked in and immediately thought: wait, what is this place?'],
+    ['What it is','The map room. A complete briefing on how the room works — every wing, every system, every essay thread — for anyone who walked in and immediately thought: wait, what is this place?'],
     ['Who it\'s for','Built specifically for ADHD brains, impatient visitors, and people who need the legend before they explore. Answers first. Wandering later, if at all. Both paths are valid.'],
-    ['Why it exists','MetaVoxa has an architecture. Five wings. A Substack. A Lobby. An Atrium. The Observatory makes that logic immediately legible — no navigation required to reverse-engineer it.'],
+    ['Why it exists','MetaVoxa has an architecture. Three arms. A Substack. An Atrium. The Observatory makes that logic immediately legible — no navigation required to reverse-engineer it.'],
     ['You are here','The Observatory is the brightest node in the constellation. The whole house is mapped above you. You\'re already inside.']
   ],link:'You are here',href:null},
   glam:{title:'Glam Wing — full briefing',rows:[
     ['What it is','Five continents. Fashion archive world. A curated space for visual culture, style systems, and the politics of appearance across geographies.'],
     ['How it works','The Glam Wing operates as a living archive — images, essays, and references mapped across continental fashion traditions. It connects the aesthetic to the structural.'],
-    ['Why it exists','MetaVoxa needed a room for the visual and the material — where fashion is read as culture, power, and identity, not just consumption. The Glam Wing treats style as research.'],
+    ['Why it exists','I needed a room for the visual and the material — where fashion is read as culture, power, and identity, not just consumption. The Glam Wing treats style as research.'],
     ['Right now','The Glam Wing is now live and open. Enter to explore the archive.']
   ],link:'Enter the Glam Wing →',href:'/glam-wing.html'}
 };
 const SI={salon:'salon',chat:'salon','real-time':'salon',realtime:'salon',messages:'salon',writer:'salon',reader:'salon',researcher:'salon',explorer:'salon',fire:'salon',rain:'salon',ambient:'salon',live:'salon',conversation:'salon',fade:'salon',study:'study',reading:'study',books:'study',essays:'study',pattern:'study',thoughts:'study',star:'study',archive:'study',library:'study',substack:'study',newsletter:'study',observatory:'obs',map:'obs',explain:'obs',briefing:'obs',guide:'obs',help:'obs',wings:'obs',house:'obs',system:'obs',works:'obs',navigate:'obs',glam:'glam',fashion:'glam',archive:'glam',style:'glam',visual:'glam',continents:'glam'};
-const NM={study:['node-study','node-reading','node-pattern','node-star'],salon:['node-salon'],obs:['node-obs'],glam:['node-glam']};
+const NM={study:['node-study','node-reading'],salon:['node-salon'],obs:['node-obs'],glam:['node-glam']};
 let stimer=null;
 
 function openPanel(k,card){
